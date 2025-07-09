@@ -142,24 +142,6 @@ const Navbar = ({ theme, toggleTheme }) => {
             ))}
           </ul>
           
-          {/* Theme Toggle Button - Hidden in this design */}
-          <div className="hidden">
-            <motion.button
-              onClick={toggleTheme}
-              whileTap={{ scale: 0.9 }}
-              className="p-2 rounded-full backdrop-blur-md bg-opacity-30 bg-white dark:bg-opacity-30 dark:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl border border-white/20 dark:border-white/10"
-              aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}
-            >
-              {theme === 'dark' ? 
-                <motion.div initial={{ rotate: -30, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} transition={{ duration: 0.3 }}>
-                  <BsSun className="text-yellow-400" />
-                </motion.div> : 
-                <motion.div initial={{ rotate: 30, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} transition={{ duration: 0.3 }}>
-                  <BsMoon className="text-gray-700" />
-                </motion.div>
-              }
-            </motion.button>
-          </div>
         </nav>
       </motion.header>
     </div>
